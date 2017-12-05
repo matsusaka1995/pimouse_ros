@@ -1,15 +1,24 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pimouse_ros)
 
+<<<<<<< HEAD
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
+=======
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+<<<<<<< HEAD
+=======
+  std_srvs
+  message_generation
+  actionlib_msgs
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 )
 
 ## System dependencies are found with CMake's conventions
@@ -46,6 +55,7 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
+<<<<<<< HEAD
 # add_message_files(
 #   FILES
 #   Message1.msg
@@ -71,6 +81,32 @@ find_package(catkin REQUIRED COMPONENTS
 #   DEPENDENCIES
 #   std_msgs
 # )
+=======
+add_message_files(
+  FILES
+  LightSensorValues.msg
+  MotorFreqs.msg
+)
+
+## Generate services in the 'srv' folder
+add_service_files(
+  FILES
+  TimedMotion.srv
+)
+
+## Generate actions in the 'action' folder
+add_action_files(
+  FILES
+  Music.action
+)
+
+## Generate added messages and services with any dependencies listed here
+generate_messages(
+  DEPENDENCIES
+  actionlib_msgs
+  std_msgs
+)
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -97,14 +133,22 @@ find_package(catkin REQUIRED COMPONENTS
 ###################################
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
+<<<<<<< HEAD
 ## INCLUDE_DIRS: uncomment this if your package contains header files
+=======
+## INCLUDE_DIRS: uncomment this if you package contains header files
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pimouse_ros
+<<<<<<< HEAD
 #  CATKIN_DEPENDS rospy std_msgs
+=======
+  CATKIN_DEPENDS rospy std_msgs std_srvs message_runtime
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 #  DEPENDS system_lib
 )
 
@@ -114,19 +158,29 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+<<<<<<< HEAD
 include_directories(
 # include
+=======
+# include_directories(include)
+include_directories(
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
   ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
+<<<<<<< HEAD
 # add_library(${PROJECT_NAME}
+=======
+# add_library(pimouse_ros
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 #   src/${PROJECT_NAME}/pimouse_ros.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
+<<<<<<< HEAD
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
@@ -146,6 +200,19 @@ include_directories(
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
+=======
+# add_dependencies(pimouse_ros ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+## Declare a C++ executable
+# add_executable(pimouse_ros_node src/pimouse_ros_node.cpp)
+
+## Add cmake target dependencies of the executable
+## same as for the library above
+# add_dependencies(pimouse_ros_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+## Specify libraries to link a library or executable target against
+# target_link_libraries(pimouse_ros_node
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 #   ${catkin_LIBRARIES}
 # )
 
@@ -164,7 +231,11 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
+<<<<<<< HEAD
 # install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node
+=======
+# install(TARGETS pimouse_ros pimouse_ros_node
+>>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
