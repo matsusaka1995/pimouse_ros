@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<<<<<<< HEAD
 <package format="2">
   <name>pimouse_ros</name>
   <version>0.0.0</version>
@@ -9,25 +8,12 @@
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="giaszero@yahoo.co.jp">Kishi Nagai</maintainer>
-=======
-<package>
-  <name>pimouse_ros</name>
-  <version>1.0.0</version>
-  <description>The pimouse_ros package</description>
-
-  <!-- One maintainer tag required, multiple allowed, one person per tag --> 
-  <!-- Example:  -->
-  <maintainer email="ryuichiueda@gmail.com">Ryuichi Ueda</maintainer>
->>>>>>> 9387132c79791aec8bac2394896f1a9f98fb813a
-
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>BSD</license>
 
-
-<<<<<<< HEAD
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
